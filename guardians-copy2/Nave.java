@@ -8,12 +8,37 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Nave extends Actor
 {
-    /**
-     * Act - do whatever the Nave wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public int esperar = 10;
+    private int pausa=0;
+    private int vida;
+    
+    public void Boton(){
+        if(Greenfoot.isKeyDown("up")){
+            setLocation(getX(), getY()-4);
+        }
+        if(Greenfoot.isKeyDown("down")){
+            setLocation(getX(), getY()+4);
+        }
+        if(Greenfoot.isKeyDown("left")){
+            setLocation(getX()-4, getY());
+        }
+        if(Greenfoot.isKeyDown("right")){
+            setLocation(getX()+4, getY());
+        }
+        if (esperar==0){
+            if(Greenfoot.isKeyDown("Space")){
+                getWorld().addObject(new Misil(),getX(),getY());
+                Greenfoot.playSound("bullet.wav");
+            }
+            esperar=10;
+        }
+    }
     public void act()
     {
-        // Add your action code here.
+        esperar--;
+        Boton();
+        if(pausa>0)pausa--;
+        if(pausa==1)
+        if(pausa==0)pausa=20;
     }
 }

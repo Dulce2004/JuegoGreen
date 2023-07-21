@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Ayuda extends Actor
+public class BotonAyuda extends Actor
 {
     /**
      * Act - do whatever the Ayuda wants to do. This method is called whenever
