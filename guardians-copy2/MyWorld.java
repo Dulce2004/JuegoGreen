@@ -30,6 +30,6 @@ public class MyWorld extends World
     {
         vida = vida + point;
         MosPuntaje();
-        ShowText("Vida : "+ vida, 400,25)
+        ShowText("Vida : "+ vida, 400,25);
     }
 }
