@@ -27,12 +27,11 @@ public class Misil extends Actor
             MyWorld m= (MyWorld)getWorld();
             m.addScore(20);
             
-            Greenfoot.playSound("explosion.wav");
             removeTouching(Enemigo.class);
         }
     }
     public void act()
     {
-        // Add your action code here.
+        movimiento();
     }
 }

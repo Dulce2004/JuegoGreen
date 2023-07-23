@@ -20,16 +20,17 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(500, 600, 1); 
-        MosPuntaje();
+        MosVida();
         MosScore();
         showTime();
         time = 1000;
         addObject (new Nave(), 250, 250);
+        
     }
     public void updateVida(int point)
     {
         vida = vida + point;
-        MosPuntaje();
+        MosVida();
         
         if (vida == 0){
             Greenfoot.stop();
@@ -37,7 +38,7 @@ public class MyWorld extends World
         }
     }
     
-    public void MosPuntaje(){
+    public void MosVida(){
         showText("Vida : "+ vida, 400,25);
     }
     

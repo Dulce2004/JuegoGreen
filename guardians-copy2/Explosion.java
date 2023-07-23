@@ -12,8 +12,11 @@ public class Explosion extends Actor
      * Act - do whatever the Explosion wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    private int pausa=5;
     public void act()
     {
-        // Add your action code here.
+        if(pausa>0)pausa--;
+        else getWorld().removeObject(this);
     }
 }

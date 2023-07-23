@@ -8,12 +8,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemigo extends Actor
 {
-    /**
-     * Act - do whatever the Enemigo wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public int esperar = 30;
+    public int pausa = 0;
+    public void movimiento()
+    {
+        setLocation(getX(), getY()+1);
+        if (getY()> 500){
+            setLocation(Greenfoot.getRandomNumber(500),
+            Greenfoot.getRandomNumber(50));
+        }
+    }
     public void act()
     {
-        // Add your action code here.
+        movimiento();
+        if (esperar == 0)
+        {
+            esperar = 30;
+        }
+        if(pausa>0)pausa--;
+        if(pausa == 1) getWorld().addObject(new Lase3(), getX(), getY() +50);
+        if(pausa == 0) pausa = 120;
     }
 }

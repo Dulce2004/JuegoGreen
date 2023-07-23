@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BotonAyuda extends Actor
+public class Ayuda extends Actor
 {
     /**
      * Act - do whatever the Ayuda wants to do. This method is called whenever
@@ -14,6 +14,13 @@ public class BotonAyuda extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        if (Greenfoot.mousePressed(this)){
+            getImage().scale((int)Math.round(getImage().getWidth()*0.9), (int)Math.round(getImage().getHeight()*0.9));
+            
+        }
+        if(Greenfoot.mousePressed(this)){
+            Greenfoot.delay(5);
+            Greenfoot.setWorld(new MenuAyuda());
+        }
     }
 }

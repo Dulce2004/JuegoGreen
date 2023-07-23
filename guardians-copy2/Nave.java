@@ -28,7 +28,7 @@ public class Nave extends Actor
         if (esperar==0){
             if(Greenfoot.isKeyDown("Space")){
                 getWorld().addObject(new Misil(),getX(),getY());
-                Greenfoot.playSound("bullet.wav");
+                
             }
             esperar=10;
         }
