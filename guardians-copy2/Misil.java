@@ -28,6 +28,7 @@ public class Misil extends Actor
             m.addScore(20);
             
             removeTouching(Enemigo.class);
+            Greenfoot.playSound("explosion.wav");
         }
     }
     public void act()

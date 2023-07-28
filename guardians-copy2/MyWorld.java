@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class MyWorld here.
  * 
@@ -25,7 +24,7 @@ public class MyWorld extends World
         showTime();
         time = 1000;
         addObject (new Nave(), 250, 250);
-        
+        Greenfoot.playSound("Guardians.wav");
     }
     public void updateVida(int point)
     {
@@ -35,13 +34,13 @@ public class MyWorld extends World
         if (vida == 0){
             Greenfoot.stop();
             addObject(new Perder(),250,300);
+            
+            Greenfoot.playSound("over.wav");
         }
     }
-    
     public void MosVida(){
         showText("Vida : "+ vida, 400,25);
     }
-    
     public void addScore (int points){
         score=score+points;
         MosScore();
@@ -56,6 +55,7 @@ public class MyWorld extends World
         {
             Greenfoot.stop();
             addObject(new Ganar(), 250,300);
+            Greenfoot.playSound("ganar.wav");
         }
     }
     private void showTime(){
@@ -66,5 +66,6 @@ public class MyWorld extends World
             addObject(new Enemigo(), Greenfoot.getRandomNumber (599), 500);
         }
         countTime();
+        
     }
 }
