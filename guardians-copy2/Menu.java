@@ -22,9 +22,15 @@ public class Menu extends World
             addObject(BotonAyuda, 361, 510);
             Inicion BotonInicio = new Inicion();
             addObject(BotonInicio, 141,510);
+            
         }
         else{
             addObject(new Backk(), 61,61);
+        }
+        
+        if (this.getClass().getName().equalsIgnoreCase("Win")){
+            Volver BotonVolver = new Volver();
+            addObject(BotonVolver, 361, 510);
         }
     }
 }

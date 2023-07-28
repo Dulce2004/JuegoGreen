@@ -32,11 +32,17 @@ public class MyWorld extends World
         MosVida();
         
         if (vida == 0){
-            Greenfoot.stop();
+            
             addObject(new Perder(),250,300);
+            addObject(new Volver(), 250, 500);
+            addObject(new Finish(), 425, 550);
+            Greenfoot.stop();
             
             Greenfoot.playSound("over.wav");
         }
+        
+        
+    
     }
     public void MosVida(){
         showText("Vida : "+ vida, 400,25);
@@ -55,6 +61,9 @@ public class MyWorld extends World
         {
             Greenfoot.stop();
             addObject(new Ganar(), 250,300);
+            addObject(new Volver(), 235, 475);
+            addObject(new Finish(), 425, 550);
+            
             Greenfoot.playSound("ganar.wav");
         }
     }
