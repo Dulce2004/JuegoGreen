@@ -26,7 +26,5 @@ public class Menu extends World
         else{
             addObject(new Backk(), 61,61);
         }
-        
-        
     }
 }

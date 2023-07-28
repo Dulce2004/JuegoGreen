@@ -15,5 +15,9 @@ public class MenuAyuda extends Menu
      */
     public MenuAyuda()
     {
+        prepare();
+    }
+    private void prepare()
+    {
     }
 }
